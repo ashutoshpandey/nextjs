@@ -1,5 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
+import Test from "../test/page";
+import Link from "next/link";
 
 interface Item {
     id: number;
@@ -28,6 +30,10 @@ export default function About() {
     return (
         <main>
             <h1>Welcome to about</h1>
+            <hr />
+            <Test />
+            <br />
+            <Link href="profile">Profile</Link>
             <hr />
             <select>
                 {items.map(item => (
