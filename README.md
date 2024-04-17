@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Routing
+
+- In Nextjs, if a route is auth/login, it expects a folder named auth under app and subfolder login under auth
+- If you put () on a folder, it will not be included in route
+- If you put [] on a folder, that will represent path variable
+- If a folder has _ before the name, it will not render in browser
+
+
+## Layouts
+
+- By default Nextjs will pick layout.tsx under app folder for main layout
+- If you have an inner layout.tsx in a folder, that will get preference
+- You can manually assign a layout. Example, create a folder named _layouts and create a file site-layout.tsx
+
+  Now, to apply this route to a page, add this tag as the root tag:
+
+```
+  <SiteLayout>
+    ...
+  </SiteLayout>
+```
